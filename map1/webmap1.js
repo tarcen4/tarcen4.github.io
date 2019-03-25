@@ -1,4 +1,4 @@
-let renameThis = L.map('Louisiana').setView([31, -92], 3)
+let Louisiana = L.map('Louisiana').setView([31, -92], 3)
 L.tileLayer('https://tile.openstreetmap.bzh/br/{z}/{x}/{y}.png').addTo(Louisiana)
 let LSU = L.marker([30.4133, -91.1800]).addTo(Louisiana)
 let Baton_Rouge = L.polygon([
