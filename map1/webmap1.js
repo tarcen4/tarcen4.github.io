@@ -15,6 +15,6 @@ var latlngs = [
 ];
 var polyline = L.polyline(latlngs, {color: 'red'}).addTo(Louisiana);
 
-Baton_Rouge.bindPopup('A polygon');
-LSU.bindPopup('A marker');
-polyline.bindPopup('A polyline');
+Baton_Rouge.bindPopup('Baton Rouge');
+LSU.bindPopup('LSU');
+polyline.bindPopup('LSU to Clinton');
