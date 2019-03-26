@@ -2,10 +2,10 @@ let Louisiana = L.map('webmap').setView([31, -92], 7)
 L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png').addTo(Louisiana)
 let LSU = L.marker([30.4133, -91.1800]).addTo(Louisiana)
 let Baton_Rouge = L.polygon([
-  [30.511415, -91.174133],
-  [30.473722, -91.057859],
-  [30.351835, -91.048093],
-  [30.388899, -91.209385]
+  [30.612821, -91.203405],
+  [30.389945, -91.217228],
+  [30.330510, -91.017672],
+  [30.479040, -91.002912]
 ]).addTo(Louisiana);
 
 var latlngs = [
