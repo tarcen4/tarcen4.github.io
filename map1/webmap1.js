@@ -1,4 +1,4 @@
-let Louisiana = L.map('webmap').setView([31, -92], 8)
+let Louisiana = L.map('webmap').setView([31, -92], 7)
 L.tileLayer('https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png').addTo(Louisiana)
 let LSU = L.marker([30.4133, -91.1800]).addTo(Louisiana)
 let Baton_Rouge = L.polygon([
