@@ -9,9 +9,9 @@ let Baton_Rouge = L.polygon([
 ]).addTo(Louisiana);
 
 var latlngs = [
-    [30.53, -91.2],
-    [30.67, -91.43],
-    [30.04, -91.2]
+    [30.4133, -91.1800],
+    [30.648520, -91.156494],
+    [30.865096, -91.015939]
 ];
 var polyline = L.polyline(latlngs, {color: 'red'}).addTo(Louisiana);
 
