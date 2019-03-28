@@ -12,6 +12,3 @@ L.tileLayer.wms('https://nowcoast.noaa.gov/arcgis/services/nowcoast/guidance_mod
   transparent: true,
   attribution: 'NOAA'
 }).addTo(usa);
-L.esri.dynamicMapLayer({
-  url: 'https://nowcoast.noaa.gov/arcgis/rest/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer'
-}).addTo(usa)
