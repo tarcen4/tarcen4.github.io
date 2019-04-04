@@ -14,9 +14,9 @@ jQuery.getJSON(nolaDemographicsUrl, function (data) {
     }
   }
     let onEachFeature = function (feature, layer) {
-      let name = feature.properties.STATE_NAME
-      let age = feature.properties.MED_AGE
-      layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+      let name = feature.properties.NAME
+      let acres = feature.properties.ACRES
+      layer.bindPopup('Name: ' + name + '<br>Acres:' + acres + '<br>National average: 38')
   }
   let parksGeojsonOptions = {
     style: parkStyle,
