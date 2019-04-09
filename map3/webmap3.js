@@ -4,9 +4,9 @@ L.tileLayer(basemap).addTo(nola);
 let nolaDemographicsUrl = 'https://opendata.arcgis.com/datasets/3273a5f8334d40838681ff0337eddb8c_0.geojson';
 jQuery.getJSON(nolaDemographicsUrl, function (data) {
   let parkStyle = function (feature) {
-    let acres = feature.properties.ACRES
+    let council = feature.properties.COUNCIL
     let parkColor = 'purple'
-    if ( acres > 10  ) { parkColor = 'blue' }
+    if ( council=='A'  ) { parkColor = 'teal' }
     return {
       color: parkColor,
       weight: 1.5,
@@ -15,8 +15,10 @@ jQuery.getJSON(nolaDemographicsUrl, function (data) {
   }
     let onEachFeature = function (feature, layer) {
       let name = feature.properties.NAME
-      let acres = feature.properties.ACRES
-      layer.bindPopup('Name: ' + name + '<br>Acres:' + acres + '<br>National average: 38')
+      let street = feature.properties.STREET
+      let neighborhood = feature.properties.NEGIHBORHOOD_NAME
+      let council = feature.properties.COUNCIL
+      layer.bindPopup('Name: ' + name + '<br>Street: ' + street + '<br>Neighborhood: ' + neighborhood + '<br>City Council District: ' + council)
   }
   let parksGeojsonOptions = {
     style: parkStyle,
