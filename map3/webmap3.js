@@ -1,4 +1,4 @@
-let nola = L.map('webmap3').setView([30, -89.9], 12);
+let nola = L.map('webmap3').setView([29.989260, -90.055408], 12);
 let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
 L.tileLayer(basemap).addTo(nola);
 let nolaDemographicsUrl = 'https://opendata.arcgis.com/datasets/3273a5f8334d40838681ff0337eddb8c_0.geojson';
