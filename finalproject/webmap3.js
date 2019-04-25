@@ -1,14 +1,16 @@
-let nola = L.map('webmap3').setView([30.52, -91.095644], 11);
+let ebr = L.map('webmap3').setView([30.52, -91.095644], 11);
 let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
-L.tileLayer(basemap).addTo(nola);
-let nolaDemographicsUrl = 'https://opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0.geojson';
-jQuery.getJSON(nolaDemographicsUrl, function (data) {
-  let parkStyle = function (feature) {
-    let council = feature.properties.COUNCIL
-    let parkColor = 'purple'
-    if ( council=='A'  ) { parkColor = 'teal' }
+L.tileLayer(basemap).addTo(ebr);
+let ebrDemographicsUrl = 'https://opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0.geojson';
+jQuery.getJSON(ebrDemographicsUrl, function (data) {
+  let wardStyle = function (feature) {
+    let ward = feature.properties.WARD
+    let wardColor = 'white'
+    if ( ward=='1'  ) { wardColor = '#00004d' }
+    else if ( ward=='2'  ) { wardColor = '#003300' }
+    else { wardColor = '#b38f00' }
     return {
-      color: parkColor,
+      color: wardColor,
       weight: 1.5,
       fillOpacity: 0.3
     }
@@ -29,9 +31,9 @@ jQuery.getJSON(nolaDemographicsUrl, function (data) {
       let lasenate = feature.properties.LA_SENATE
       layer.bindPopup('Voting Precinct: ' + vprecinct + '<br>Ward: ' + ward + '<br>Precinct: ' + precinct + '<br>Total Population: ' + totpop + '<br>White Population: ' + wpop + '<br>Black Population: ' + bpop + '<br>Other Population: ' + opop + '<br>Metro Council: ' + mc + '<br>US Congressional District: ' + cd + '<br>Public Service Commission: ' + psc + '<br>BESE District: ' + bese + '<br>LA House District: ' + lahouse + '<br>LA Senate District: ' + lasenate)
   }
-  let parksGeojsonOptions = {
-    style: parkStyle,
+  let wardGeojsonOptions = {
+    style: wardStyle,
     onEachFeature: onEachFeature
   }
-  L.geoJSON(data, parksGeojsonOptions).addTo(nola)
+  L.geoJSON(data, wardGeojsonOptions).addTo(ebr)
 })
