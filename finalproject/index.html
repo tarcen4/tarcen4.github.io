@@ -1,21 +1,37 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr">
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Final Project</title>
+    <title>EBR Parish</title>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
     <link rel="stylesheet" href="webmap3.css">
-    <title>ebr</title>
+
   </head>
   <body>
-    <h1 class="centered">Voting Precincts in East Baton Rouge Parish</h1>
-
+    <p>
+        <img src = "br.png" alt="" style="height:100px; width:170px">
+    </p>
+    <h1 style="font-family:verdana">Voting Precincts in East Baton Rouge Parish</h1>
     <div class="container">
-      <h2><a name="5"></a>Wards</h2>
+      <p style="font-family:verdana;">There are three voting wards in East Baton Rouge Parish: Ward 1 (blue), Ward 2 (red), and Ward 3 (gray). Each ward is further divided into precincts. A precinct is defined in the <a href="https://www.sos.la.gov/ElectionsAndVoting/PublishedDocuments/ElectionCode.pdf">Election Code</a> as the smallest political unit of a ward having defined
+geographical boundaries. One polling place is required for each precinct. To learn more about voting in EBR Parish, consult the <a href="https://www.sos.la.gov/ElectionsAndVoting/PublishedDocuments/VotingPrecinctHandbook.pdf"> Voting Precinct and
+Polling Place Handbook</a>. To <a href="https://www.sos.la.gov/ElectionsAndVoting/RegisterToVote/Pages/default.aspx">register to vote</a>, visit the Secretary of State's website.  </p>
       <div id="webmap3"></div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script src="webmap3.js"></script>
+
+    <p style="font-family:verdana;"><b>Description:</b> Polygon geometry with attributes displaying voting precincts and voter demographics in East Baton Rouge Parish, Louisiana<br>
+<br><b>Map Image Layer:</b> Provided by East Baton Rouge GIS Map Portal <br>
+<br><b>View metadata:</b> <a href="https://data-ebrgis.opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0">EBRGIS</a><br>
+<br><b>Data Source:</b> <a href="https://maps.brla.gov/gis/rest/services/Governmental_Units/Voting_Precinct/MapServer/0">BRLA Maps</a><br>
+<br><b>Attribution:</b> EBRGIS; Louisiana Secretary of the State; EBR Registrar of Voters; Department of Information Services<br>
+<br><b>Data last updated:</b> October 20, 2018
+</p>
+
   </body>
 </html>
