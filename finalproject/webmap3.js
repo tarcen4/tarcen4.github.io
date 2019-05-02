@@ -1,14 +1,14 @@
-let ebr = L.map('webmap3').setView([30.52, -91.095644], 11);
+let ebr = L.map('webmap3').setView([30.52, -91.095644], 10);
 let basemap = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
 L.tileLayer(basemap).addTo(ebr);
 let ebrDemographicsUrl = 'https://opendata.arcgis.com/datasets/d7a7c859cb464d699e77619416528e2a_0.geojson';
 jQuery.getJSON(ebrDemographicsUrl, function (data) {
   let wardStyle = function (feature) {
     let ward = feature.properties.WARD
-    let wardColor = 'white'
-    if ( ward=='1'  ) { wardColor = '#00004d' }
-    else if ( ward=='2'  ) { wardColor = '#003300' }
-    else { wardColor = '#b38f00' }
+    let wardColor = 'blue'
+    if ( ward=='1'  ) { wardColor = '#00447b' }
+    else if ( ward=='2'  ) { wardColor = '#de4429' }
+    else { wardColor = '#757575' }
     return {
       color: wardColor,
       weight: 1.5,
